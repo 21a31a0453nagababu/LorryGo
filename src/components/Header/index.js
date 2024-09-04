@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import LogoImage from '../../assets/images/logo1.jpg';
 import './index.css';
 
@@ -12,7 +12,7 @@ const Header = () => {
         <NavLink to="/materials" activeClassName="active">Materials</NavLink>
         <NavLink to="/cart" activeClassName="active">Cart</NavLink>
         <NavLink to="/profile" activeClassName="active">Profile</NavLink>
-       <button className="button"> <NavLink to="/login" activeClassName="active">LoginOut</NavLink></button>
+       <button className="button"> <NavLink to="/login" activeClassName="active">LogOut</NavLink></button>
       </nav>
     </header>
   );
