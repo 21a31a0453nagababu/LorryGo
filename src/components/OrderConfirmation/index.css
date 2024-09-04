@@ -1,0 +1,80 @@
+.lorry-animation {
+  position: relative;
+  margin-top: 50px;
+}
+
+.lorry {
+  font-size: 2rem;
+  position: absolute;
+  left: 0; /* Start from the left side */
+  transform: scaleX(-1); /* Flip the lorry horizontally */
+  animation: moveLorry 3s linear forwards;
+}
+
+@keyframes moveLorry {
+  0% {
+    left: 0; /* Start at the left side */
+  }
+  100% {
+    left: calc(100% - 50px); /* Move to the right */
+  }
+}
+
+h3 {
+  margin-top: 80px;
+  color: #28a745;
+}
+
+.order-confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.order-form {
+  width: 300px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

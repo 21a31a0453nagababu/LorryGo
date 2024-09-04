@@ -1,38 +1,137 @@
-.App {
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Header styles */
+.header {
+  background-color: #343a40;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav a {
+    display: block;
+    margin: 10px 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Layout containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Button styles */
+button {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Input styles */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+/* Page specific adjustments */
+.home, .materials, .cart, .profile, .dashboard, .login-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Responsive typography */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  p {
+    font-size: 1rem;
   }
+}
+
+/* Login container styles */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
 }
